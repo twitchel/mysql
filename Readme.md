@@ -313,8 +313,8 @@ var connection = mysql.createConnection({
 
 The following flags are available:
 
-- `COMPRESS` - Enable protocol compression. This feature is not currently supported
-  by the Node.js implementation so cannot be turned on. (Default off)
+- `COMPRESS` - Enable protocol compression. At the moment, mysqljs only
+  implements compression in one direction, from the server to the client.(Default off)
 - `CONNECT_WITH_DB` - Ability to specify the database on connection. (Default on)
 - `FOUND_ROWS` - Send the found rows instead of the affected rows as `affectedRows`.
   (Default on)
