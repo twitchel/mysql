@@ -1,6 +1,6 @@
 {
-  "name": "mysql",
-  "description": "A node.js driver for mysql. It is written in JavaScript, does not require compiling, and is 100% MIT licensed.",
+  "name": "@vlasky/mysql",
+  "description": "A fork of mysqljs/mysql with partial support for the MySQL compressed protocol (reads compressed data sent by server). It is written in JavaScript, does not require compiling, and is 100% MIT licensed.",
   "version": "2.18.1",
   "license": "MIT",
   "author": "Felix Geisendörfer <felix@debuggable.com> (http://debuggable.com/)",
