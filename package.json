@@ -1,21 +1,23 @@
 {
   "name": "@vlasky/mysql",
   "description": "A fork of mysqljs/mysql with partial support for the MySQL compressed protocol (reads compressed data sent by server). It is written in JavaScript, does not require compiling, and is 100% MIT licensed.",
-  "version": "2.18.1",
+  "version": "2.18.2",
   "license": "MIT",
-  "author": "Felix Geisendörfer <felix@debuggable.com> (http://debuggable.com/)",
+  "author": "Vlad Lasky <github@vladlasky.com> (https://github.com/vlasky)",
   "contributors": [
+    "Felix Geisendörfer <felix@debuggable.com> (http://debuggable.com/)",
     "Andrey Sidorov <sidorares@yandex.ru>",
     "Bradley Grainger <bgrainger@gmail.com>",
     "Douglas Christopher Wilson <doug@somethingdoug.com>",
     "Diogo Resende <dresende@thinkdigital.pt>",
-    "Nathan Woltman <nwoltman@outlook.com>"
+    "Nathan Woltman <nwoltman@outlook.com>",
+    "Aritz Beobide-Cardinal <aritz@aritzcracker.ca>"
   ],
-  "repository": "mysqljs/mysql",
+  "repository": "vlasky/mysql",
   "dependencies": {
-    "bignumber.js": "9.0.0",
+    "bignumber.js": "9.0.1",
     "readable-stream": "2.3.7",
-    "safe-buffer": "5.1.2",
+    "safe-buffer": "5.2.1",
     "sqlstring": "2.3.2"
   },
   "devDependencies": {
