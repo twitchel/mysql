@@ -67,29 +67,28 @@ Installation is done using the
 [`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
 ```sh
-$ npm install mysql
+$ npm install @vlasky/mysql
 ```
 
-For information about the previous 0.9.x releases, visit the [v0.9 branch][].
-
-Sometimes I may also ask you to install the latest version from Github to check
-if a bugfix is working. In this case, please do:
+Sometimes you may be asked to install the latest version from Github to check
+if a bugfix is working. In this case, please run:
 
 ```sh
-$ npm install mysqljs/mysql
+$ npm install vlasky/mysql
 ```
-
-[v0.9 branch]: https://github.com/mysqljs/mysql/tree/v0.9
 
 ## Introduction
 
-This is a node.js driver for mysql. It is written in JavaScript, does not
-require compiling, and is 100% MIT licensed.
+This is a Node.js driver for mysql. It is a fork of [mysqljs/mysql](https://github.com/mysqljs/mysql/)
+with partial support for the MySQL compressed protocol (reads compressed data sent by server)
+and authentication using the caching_sha2_password plugin, the default authentication method in MySQL 8.
+
+It is written in JavaScript, does not require compiling, and is 100% MIT licensed.
 
 Here is an example on how to use it:
 
 ```js
-var mysql      = require('mysql');
+var mysql      = require('@vlasky/mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'me',
@@ -118,20 +117,19 @@ From this example, you can learn the following:
 Thanks goes to the people who have contributed code to this module, see the
 [GitHub Contributors page][].
 
-[GitHub Contributors page]: https://github.com/mysqljs/mysql/graphs/contributors
+[GitHub Contributors page]: https://github.com/vlasky/mysql/graphs/contributors
 
-Additionally I'd like to thank the following people:
+Thanks also go to the following people:
 
-* [Andrey Hristov][] (Oracle) - for helping me with protocol questions.
-* [Ulf Wendel][] (Oracle) - for helping me with protocol questions.
+* [Andrey Hristov][] (Oracle) - for helping with protocol questions.
+* [Ulf Wendel][] (Oracle) - for helping with protocol questions.
 
 [Ulf Wendel]: http://blog.ulf-wendel.de/
 [Andrey Hristov]: http://andrey.hristov.com/
 
 ## Sponsors
 
-The following companies have supported this project financially, allowing me to
-spend more time on it (ordered by time of contribution):
+The following companies have supported this project financially:
 
 * [Transloadit](http://transloadit.com) (my startup, we do file uploading &
   video encoding as a service, check it out)
@@ -154,7 +152,7 @@ of the following:
 The recommended way to establish a connection is this:
 
 ```js
-var mysql      = require('mysql');
+var mysql      = require('@vlasky/mysql');
 var connection = mysql.createConnection({
   host     : 'example.org',
   user     : 'bob',
@@ -174,7 +172,7 @@ connection.connect(function(err) {
 However, a connection can also be implicitly established by invoking a query:
 
 ```js
-var mysql      = require('mysql');
+var mysql      = require('@vlasky/mysql');
 var connection = mysql.createConnection(...);
 
 connection.query('SELECT 1', function (error, results, fields) {
@@ -398,7 +396,7 @@ provides built-in connection pooling using `mysql.createPool(config)`.
 Create a pool and use it directly:
 
 ```js
-var mysql = require('mysql');
+var mysql = require('@vlasky/mysql');
 var pool  = mysql.createPool({
   connectionLimit : 10,
   host            : 'example.org',
@@ -420,7 +418,7 @@ share connection state for subsequent queries. This is because two calls to
 the basic structure:
 
 ```js
-var mysql = require('mysql');
+var mysql = require('@vlasky/mysql');
 var pool  = mysql.createPool(...);
 
 pool.getConnection(function(err, connection) {
@@ -1255,7 +1253,7 @@ fatal error is triggered by trying to connect to an invalid port. Therefore the
 error object is propagated to both pending callbacks:
 
 ```js
-var connection = require('mysql').createConnection({
+var connection = require('@vlasky/mysql').createConnection({
   port: 84943, // WRONG PORT
 });
 
@@ -1369,7 +1367,7 @@ It is not recommended (and may go away / change in the future) to disable type
 casting, but you can currently do so on either the connection:
 
 ```js
-var connection = require('mysql').createConnection({typeCast: false});
+var connection = require('@vlasky/mysql').createConnection({typeCast: false});
 ```
 
 Or on the query level:

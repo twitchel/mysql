@@ -11,7 +11,9 @@
     "Douglas Christopher Wilson <doug@somethingdoug.com>",
     "Diogo Resende <dresende@thinkdigital.pt>",
     "Nathan Woltman <nwoltman@outlook.com>",
-    "Aritz Beobide-Cardinal <aritz@aritzcracker.ca>"
+    "Aritz Beobide-Cardinal <aritz@aritzcracker.ca>",
+    "Rui Quelhas <rui.quelhas@oracle.com>",
+    "Nathan Woltman <nwoltman@outlook.com>"
   ],
   "repository": "vlasky/mysql",
   "dependencies": {
