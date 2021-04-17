@@ -1,19 +1,19 @@
 {
   "name": "@vlasky/mysql",
   "description": "A fork of mysqljs/mysql with partial support for the MySQL compressed protocol (reads compressed data sent by server). It is written in JavaScript, does not require compiling, and is 100% MIT licensed.",
-  "version": "2.18.3",
+  "version": "2.18.4",
   "license": "MIT",
   "author": "Vlad Lasky <github@vladlasky.com> (https://github.com/vlasky)",
   "contributors": [
     "Felix Geisendörfer <felix@debuggable.com> (http://debuggable.com/)",
-    "Andrey Sidorov <sidorares@yandex.ru>",
-    "Bradley Grainger <bgrainger@gmail.com>",
-    "Douglas Christopher Wilson <doug@somethingdoug.com>",
-    "Diogo Resende <dresende@thinkdigital.pt>",
-    "Nathan Woltman <nwoltman@outlook.com>",
-    "Aritz Beobide-Cardinal <aritz@aritzcracker.ca>",
-    "Rui Quelhas <rui.quelhas@oracle.com>",
-    "Nathan Woltman <nwoltman@outlook.com>"
+    "Andrey Sidorov <sidorares@yandex.ru> (https://github.com/sidorares)",
+    "Bradley Grainger <bgrainger@gmail.com> (https://github.com/bgrainger)",
+    "Douglas Christopher Wilson <doug@somethingdoug.com> (https://github.com/dougwilson)",
+    "Diogo Resende <dresende@thinkdigital.pt> (https://github.com/dresende)",
+    "Nathan Woltman <nwoltman@outlook.com> (https://github.com/nwoltman)",
+    "Aritz Beobide-Cardinal <aritz@aritzcracker.ca> (https://github.com/ARitz-Cracker)",
+    "Rui Quelhas <rui.quelhas@oracle.com> (https://github.com/ruiquelhas)",
+    "Peter Chung <touhonoob@gmail.com> (https://github.com/touhonoob)"
   ],
   "repository": "vlasky/mysql",
   "dependencies": {
