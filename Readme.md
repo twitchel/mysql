@@ -3,9 +3,6 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 [![Node.js Version][node-version-image]][node-version-url]
-[![Linux Build][travis-image]][travis-url]
-[![Windows Build][appveyor-image]][appveyor-url]
-[![Test Coverage][coveralls-image]][coveralls-url]
 
 ## Table of Contents
 
@@ -79,13 +76,15 @@ $ npm install vlasky/mysql
 
 ## Introduction
 
-This is a Node.js driver for mysql. It is a fork of [mysqljs/mysql](https://github.com/mysqljs/mysql/)
-with partial support for the MySQL compressed protocol (reads compressed data sent by server)
-and authentication using the caching_sha2_password plugin, the default authentication method in MySQL 8.
+This is a Node.js driver for MySQL. It is a fork of [mysqljs/mysql](https://github.com/mysqljs/mysql/)
+that adds new functionality including:
+
+* Partial support for the MySQL compressed protocol (reads compressed data sent by server)
+* Authentication using the caching_sha2_password plugin, the default authentication method in MySQL 8.
 
 It is written in JavaScript, does not require compiling, and is 100% MIT licensed.
 
-Here is an example on how to use it:
+Here is an example of how to use it:
 
 ```js
 var mysql      = require('@vlasky/mysql');
@@ -125,18 +124,18 @@ Thanks also go to the following people:
 * [Ulf Wendel][] (Oracle) - for helping with protocol questions.
 
 [Ulf Wendel]: http://blog.ulf-wendel.de/
-[Andrey Hristov]: http://andrey.hristov.com/
+[Andrey Hristov]: https://andrey.hristov.com/
 
 ## Sponsors
 
 The following companies have supported this project financially:
 
-* [Transloadit](http://transloadit.com) (my startup, we do file uploading &
+* [Transloadit](https://transloadit.com) (file uploading &
   video encoding as a service, check it out)
-* [Joyent](http://www.joyent.com/)
-* [pinkbike.com](http://pinkbike.com/)
+* [Joyent](https://www.joyent.com/)
+* [pinkbike.com](https://pinkbike.com/)
 * [Holiday Extras](https://www.holidayextras.com/) (they are [hiring](https://join.holidayextras.co.uk/))
-* [Newscope](http://newscope.com/) (they are [hiring](https://newscope.com/unternehmen/jobs/))
+* [Newscope](https://newscope.com/) (they are [hiring](https://newscope.com/unternehmen/jobs/))
 
 ## Community
 
@@ -1580,15 +1579,9 @@ $ MYSQL_HOST=localhost MYSQL_PORT=3306 MYSQL_DATABASE=node_mysql_test MYSQL_USER
 * Prepared statements
 * Support for encodings other than UTF-8 / ASCII
 
-[npm-image]: https://img.shields.io/npm/v/mysql.svg
-[npm-url]: https://npmjs.org/package/mysql
-[node-version-image]: https://img.shields.io/node/v/mysql.svg
+[npm-image]: https://img.shields.io/npm/v/@vlasky/mysql.svg
+[npm-url]: https://npmjs.org/package/@vlasky/mysql
+[node-version-image]: https://img.shields.io/node/v/@vlasky/mysql.svg
 [node-version-url]: https://nodejs.org/en/download/
-[travis-image]: https://img.shields.io/travis/mysqljs/mysql/master.svg?label=linux
-[travis-url]: https://travis-ci.org/mysqljs/mysql
-[appveyor-image]: https://img.shields.io/appveyor/ci/dougwilson/node-mysql/master.svg?label=windows
-[appveyor-url]: https://ci.appveyor.com/project/dougwilson/node-mysql
-[coveralls-image]: https://img.shields.io/coveralls/mysqljs/mysql/master.svg
-[coveralls-url]: https://coveralls.io/r/mysqljs/mysql?branch=master
-[downloads-image]: https://img.shields.io/npm/dm/mysql.svg
-[downloads-url]: https://npmjs.org/package/mysql
+[downloads-image]: https://img.shields.io/npm/dm/@vlasky/mysql.svg
+[downloads-url]: https://npmjs.org/package/@vlasky/mysql
