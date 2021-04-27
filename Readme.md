@@ -67,8 +67,8 @@ Installation is done using the
 $ npm install @vlasky/mysql
 ```
 
-Sometimes you may be asked to install the latest version from Github to check
-if a bugfix is working. In this case, please run:
+Sometimes you may be asked to install the latest version from GitHub to check
+if a bugfix is working. In that case, please run:
 
 ```sh
 $ npm install vlasky/mysql
@@ -80,7 +80,8 @@ This is a Node.js driver for MySQL. It is a fork of [mysqljs/mysql](https://gith
 that adds new functionality including:
 
 * Partial support for the MySQL compressed protocol (reads compressed data sent by server)
-* Authentication using the caching_sha2_password plugin, the default authentication method in MySQL 8.
+* Authentication using the caching_sha2_password plugin, the default authentication method in MySQL 8
+* Optional sending of keepalive probe packets to check the state of the connection to the MySQL server and help keep it open when the network socket is idle
 
 It is written in JavaScript, does not require compiling, and is 100% MIT licensed.
 
@@ -234,6 +235,8 @@ issue [#501](https://github.com/mysqljs/mysql/issues/501). (Default: `false`)
   [Connection Flags](#connection-flags).
 * `ssl`: object with ssl parameters or a string containing name of ssl profile. See [SSL options](#ssl-options).
 * `secureAuth`: required to support `caching_sha2_password` handshakes over insecure connections (default behavior on MySQL 8.0.4 or higher). See [Authentication options](#authentication-options).
+* `enableKeepAlive`: Enable sending of keepalive probes when the network socket is idle. (Default: `false`)
+* `keepAliveInitialDelay`: The initial delay in milliseconds before the first keepalive probe is sent on an idle socket. See [Net.socket.setKeepAlive](https://nodejs.org/api/net.html#net_socket_setkeepalive_enable_initialdelay). (Default: `0`)
 
 
 In addition to passing these options as an object, you can also use a url

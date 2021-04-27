@@ -65,6 +65,25 @@ test('ConnectionConfig#Constructor', {
   'blacklists unsupported client flags': function() {
     var config = new ConnectionConfig({ flags: '+CONNECT_ATTRS' });
     assert.equal(config.clientFlags & common.ClientConstants.CLIENT_CONNECT_ATTRS, 0);
+  },
+
+  'Socket enableKeepAlive defaults to false (default)': function() {
+    var config = new ConnectionConfig({});
+    assert.equal(config.enableKeepAlive, false);
+  },
+
+  'Socket enableKeepAlive is set in config': function() {
+    var config = new ConnectionConfig({ enableKeepAlive: true });
+    assert.equal(config.enableKeepAlive, true);
+  }
+  'Socket keepAliveInitialDelay defaults to 0 (default)': function() {
+    var config = new ConnectionConfig({});
+    assert.equal(config.keepAliveInitialDelay, 0);
+  },
+
+  'Socket keepAliveInitialDelay is set in config': function() {
+    var config = new ConnectionConfig({ keepAliveInitialDelay: 60000 });
+    assert.equal(config.keepAliveInitialDelay, 60000);
   }
 });
 

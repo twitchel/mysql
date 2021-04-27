@@ -1,7 +1,7 @@
 {
   "name": "@vlasky/mysql",
   "description": "A fork of mysqljs/mysql with partial support for the MySQL compressed protocol (reads compressed data sent by server). It is written in JavaScript, does not require compiling, and is 100% MIT licensed.",
-  "version": "2.18.4",
+  "version": "2.18.5",
   "license": "MIT",
   "author": "Vlad Lasky <github@vladlasky.com> (https://github.com/vlasky)",
   "contributors": [
@@ -13,7 +13,8 @@
     "Nathan Woltman <nwoltman@outlook.com> (https://github.com/nwoltman)",
     "Aritz Beobide-Cardinal <aritz@aritzcracker.ca> (https://github.com/ARitz-Cracker)",
     "Rui Quelhas <rui.quelhas@oracle.com> (https://github.com/ruiquelhas)",
-    "Peter Chung <touhonoob@gmail.com> (https://github.com/touhonoob)"
+    "Peter Chung <touhonoob@gmail.com> (https://github.com/touhonoob)",
+    "Gabriel Fournier <gfournier@focusoptimization.com> (https://github.com/carboneater)"
   ],
   "repository": "vlasky/mysql",
   "dependencies": {
